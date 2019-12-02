@@ -1,5 +1,5 @@
 <template>
-    <el-container class="container">
+    <el-container id="quizSection" class="container">
         <el-row>
             <h2 class="texto">Acesse o questionário assim que finalizar a videoaula.</h2>
         </el-row>

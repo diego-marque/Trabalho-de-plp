@@ -2,7 +2,7 @@
     <el-row class="max-width-container">
         <Navbar />
         <HomeCarousel />
-        <Presentation id="PresentationSection"/>
+        <Presentation />
         <Quiz />
     </el-row>
 </template>

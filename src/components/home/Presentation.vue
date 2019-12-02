@@ -1,5 +1,5 @@
 <template>
-    <el-row justify="center" class="presentation-container">
+    <el-row id="pesentationSection" justify="center" class="presentation-container">
         <el-main>
             <el-col class="youtube-video" align="center" :sm="24" :md="12">
                 <youtube id="youtube-video" :video-id="presentationVideo.video_id" :mute="true" @ready="ready"></youtube>

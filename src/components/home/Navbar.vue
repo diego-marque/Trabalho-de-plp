@@ -1,8 +1,8 @@
 <template>
   <el-menu class="el-menu-demo" mode="horizontal" background-color="#10ADB2" text-color="#fff" justify="center">
-    <el-image class="logo-image" :src="img"></el-image>
-    <el-menu-item href="/#PresentationSection" class="botao-nav">Vídeo Aula</el-menu-item>
-    <el-menu-item index="3" class="botao-nav">Questionário</el-menu-item>
+    <el-image class="logo-image" :src="img" @click="scrollTo()"></el-image>
+    <el-menu-item class="botao-nav"><a href="/#pesentationSection">Vídeo Aula</a></el-menu-item>
+    <el-menu-item class="botao-nav"><a href="/#quizSection">Questionário</a></el-menu-item>
   </el-menu>
 </template>
 
@@ -20,6 +20,13 @@ el-menu{
   cursor: pointer;
   z-index: 1;
 }
+
+.logo-image:hover
+{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
 .el-menu-demo{
   z-index: 3;
   width: 100%;
@@ -29,6 +36,12 @@ el-menu{
   justify-content: center;
   border-bottom: 0 !important;
   font-weight: bold;
+}
+
+.bota-nav {
+  z-index: 1 !important;
+  background-color: transparent !important;
+  color: white; 
 }
 
 .botao-nav:hover{
