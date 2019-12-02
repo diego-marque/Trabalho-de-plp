@@ -1,102 +1,160 @@
 <template>
-    <el-container class="page-header darken-filter" :style="{ backgroundImage: `url(${src})` }">
-        <el-row class="content-header">
-            <p class="title1"> {{ title1 }} </p>
-            <p class="subtitle1"> {{ subtitle1 }} </p>
-        </el-row>
-        <el-row class="content-header-2">
-            <p class="title2"> {{ title2 }} </p>
-            <p class="opcao"> {{ opcao1 }} </p>
-            <p class="opcao"> {{ opcao2 }} </p>
-            <p class="opcao"> {{ opcao3 }} </p>
-        </el-row>
-    </el-container>
+    <el-carousel class="home-carousel" trigger="click" arrow="never" height="100vh">
+            <el-carousel-item v-for="item in items" :key="item.id">
+                <el-row class="darken-filter" :style="{ backgroundImage: `url(${item.photo})` }">
+                    <el-col align="center" class="carousel-item-content">
+                        <h1><b>{{ item.firstWord[0] }}</b>{{ item.title }}</h1>
+                        <p class="description" v-if="item.id = 1">{{ item.description }}</p>
+                        <div class="div-itens">
+                            <p class="itens"> {{ item.item1 }} </p>
+                            <p class="itens"> {{ item.item2 }} </p>
+                            <p class="itens"> {{ item.item3 }} </p>
+                        </div>
+                    </el-col>
+                </el-row>
+            </el-carousel-item>
+    </el-carousel>
 </template>
 
 <style lang="scss">
-@import '../../styles/variables.scss';
+    .home-carousel {
 
-    .page-header {
-        height: 100vh;
-        background-repeat:no-repeat;
-        background-position: center top;
-        background-size: cover;
-        background-attachment: fixed;
-        padding-top: 300px;
-        padding-bottom: 300px;
+        .el-carousel__item{
+            
+                .el-row {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }            
+            }
 
-        flex-direction: column;
+            .el-carousel__indicators {
+                bottom: 4% !important;
 
-        .content-header {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-                
-            .title1 {
-                font: Bold 100px/133px Segoe UI;
-                margin: 0;
-                color: #FFFFFF;
-                opacity: 1;
-                z-index: 2;
-            }
-            .subtitle1 {
-                font: Bold 35px/47px Segoe UI;
-                letter-spacing: 0;
-                margin: 0;
-                color: #FCF9F9;
-                opacity: 1;
-                z-index: 2;
-            }
-        }  
-        .content-header-2 {
-            padding-top: 370px;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+                .is-active {
 
-                
-            .title2 {
-                font: Bold 50px/67px Segoe UI;
-                letter-spacing: 0;
-                margin: 0;
-                color: #FFFFFF;
-                opacity: 1;
-                z-index: 2;
-                padding-bottom: 40px;
+                    .el-carousel__button {
+                        background-color: white !important;
+                    }
+                }
+
+                .el-carousel__button {
+                    height: 20px !important;
+                    width: 20px !important;
+                    border-radius: 50px;
+                    background-color: transparent !important;
+                    opacity: 1 !important;
+                    border: 3px solid rgba(255, 255, 255, 1) !important;
+                }
             }
-            .opcao {
-                font: Bold 30px Segoe UI;
-                padding-top: 20px;
-                letter-spacing: 0;
-                margin: 0;
-                color: #FCF9F9;
-                opacity: 1;
-                z-index: 2;
+
+            .carousel-item-content {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                z-index: 2 !important;
+                height: 100vh;
+                h1 {
+                    font-size: 6.7em;
+                    font-weight: 100;
+                    margin: 0;
+                    width: 90%;
+
+                    b {
+                        font-weight: bold;
+                    }
+                }
+
+                .description {
+                    font-size: 28px;
+                    width: 100%;
+                }
+
+                .div-itens {
+                    text-align: left;
+
+                    .itens {
+                        font-size: 28px;
+                        width: 100%;
+                    }
+                }
+
             }
-        }   
+
+            @media only screen and (max-width: 1024px) {
+                .carousel-item-content {
+
+                    .description {
+                        width: 80%;
+                    }
+
+                    .div-itens {
+
+                        .itens {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                .carousel-item-content {
+
+                    h1 {
+                        width: 93%;
+                        font-size: 2.5em;
+                    }
+
+                   .description {
+                        font-size: 1.5em;
+                    }
+
+                    .div-itens {
+
+                        .itens {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
     }
 </style>
 
 <script>
-
 export default {
-    name: 'PageHeader',
+    name: 'HomeCarousel',
     data() {
         return {
-            src: require('@/assets/atenas.png'),
-
-            title1: 'Grécia Antiga',
-            subtitle1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-
-            title2: 'Como vai funcionar?',
-            opcao1: '- Uma videoaula sobre a Grécia antiga',
-            opcao2: '- Um questionário com 3 perguntas sobre',
-            opcao3: '- Seu resultado na hora',
+            items: [
+                {
+                    id: 1,
+                    photo: require('@/assets/atenas.png'),
+                    title: "GRÉCIA ANTIGA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    created_at: "2019-07-30 02:17:30",
+                    updated_at: "2019-07-30 02:17:35"
+                },
+                {
+                    id: 2,
+                    photo: require('@/assets/estatuas.jpg'),
+                    title: "Como vai funcionar?",
+                    item1: "- Uma videoaula sobre a Grécia antiga",
+                    item2: "- Um questionário com 3 perguntas sobre",
+                    item3: "- Seu resultado na hora!",
+                    created_at: "2019-08-06 21:27:47",
+                    updated_at: "2019-08-06 21:27:55"
+                },
+            ],
         }
+    },
+    beforeMount() {
+        this.items = this.items.map(item => {
+            item.firstWord = item.title.split(' ', 1);
+            item.title = item.title.replace(item.firstWord, '');
+            return item;
+        });
+    },
+    components: {
     }
 }
 </script>
