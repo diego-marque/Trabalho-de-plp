@@ -1,6 +1,7 @@
 <template>
     <el-row>
         <HomeCarousel />
+        <Presentation />
     </el-row>
 </template>
 
@@ -11,11 +12,13 @@
 
 <script>
 import HomeCarousel from "../components/home/HomeCarousel.vue";
+import Presentation from "../components/home/Presentation.vue";
 
 export default {
     name: "Home",
     components: {
         HomeCarousel,
+        Presentation,
     }
 }
 </script>
