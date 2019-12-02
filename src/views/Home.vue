@@ -1,7 +1,8 @@
 <template>
     <el-row>
+        <Navbar />
         <HomeCarousel />
-        <Presentation />
+        <Presentation id="PresentationSection"/>
     </el-row>
 </template>
 
@@ -11,12 +12,13 @@
 </style>
 
 <script>
+import Navbar from "../components/home/Navbar.vue";
 import HomeCarousel from "../components/home/HomeCarousel.vue";
 import Presentation from "../components/home/Presentation.vue";
-
 export default {
     name: "Home",
     components: {
+        Navbar,
         HomeCarousel,
         Presentation,
     }
