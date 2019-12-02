@@ -1,9 +1,10 @@
 <template>
     <el-row class="max-width-container">
+        <Navbar />
         <HomeCarousel />
-        <Presentation />
+        <Presentation id="PresentationSection"/>
         <Quiz />
-    </el-row>
+    <el-row>
 </template>
 
 <style lang="scss" scoped>
@@ -12,6 +13,7 @@
 </style>
 
 <script>
+import Navbar from "../components/home/Navbar.vue";
 import HomeCarousel from "../components/home/HomeCarousel.vue";
 import Presentation from "../components/home/Presentation.vue";
 import Quiz from "../components/home/Quiz.vue";
@@ -19,6 +21,7 @@ import Quiz from "../components/home/Quiz.vue";
 export default {
     name: "Home",
     components: {
+        Navbar,
         HomeCarousel,
         Presentation,
         Quiz,
