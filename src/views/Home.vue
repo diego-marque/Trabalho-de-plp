@@ -4,7 +4,7 @@
         <HomeCarousel />
         <Presentation id="PresentationSection"/>
         <Quiz />
-    <el-row>
+    </el-row>
 </template>
 
 <style lang="scss" scoped>
