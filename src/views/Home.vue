@@ -1,7 +1,8 @@
 <template>
-    <el-row>
+    <el-row class="max-width-container">
         <HomeCarousel />
         <Presentation />
+        <Quiz />
     </el-row>
 </template>
 
@@ -13,12 +14,14 @@
 <script>
 import HomeCarousel from "../components/home/HomeCarousel.vue";
 import Presentation from "../components/home/Presentation.vue";
+import Quiz from "../components/home/Quiz.vue";
 
 export default {
     name: "Home",
     components: {
         HomeCarousel,
         Presentation,
+        Quiz,
     }
 }
 </script>

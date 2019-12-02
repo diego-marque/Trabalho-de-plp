@@ -5,7 +5,7 @@
                 <youtube id="youtube-video" :video-id="presentationVideo.video_id" :mute="true" @ready="ready"></youtube>
             </el-col>
             <el-col class="presentation-video-description" :sm="24" :md="12">
-                <h1>Lorem Ipsum</h1>
+                <h1>Grécia Antiga, módulo I: período clássico</h1>
                 <p id="text-presentation"> {{presentationVideo.description}} </p>
             </el-col>
         </el-main>
@@ -67,13 +67,13 @@
             padding: 0 5% 0 5%;
 
             h1 {
-                font: Bold 60px Segoe UI;
+                font: Bold 40px Segoe UI;
                 color: #ECEAEA;
                 margin: 0;
             }
 
             p {
-               font: 24px Segoe UI;
+               font: 20px Segoe UI;
             }
         }
 
@@ -99,13 +99,27 @@
             .presentation-video-description {
 
                 h1 {
-                    font-size: 3.5em;
-                    text-align: center;
-                }
+                    font-size: 2.0em;
+                    text-align: left;                }
 
                 p {
-                    font-size: 1em;
-                    text-align: center;
+                    font-size: 1.2em;
+                    text-align: left;
+                }
+            } 
+        }
+
+        @media screen and (max-width: 768px) {
+            .presentation-video-description {
+                
+                h1 {
+                    margin-top: 30px;
+                    font-size: 2.0em;
+                    text-align: left;                }
+
+                p {
+                    font-size: 1.1em;
+                    text-align: left;
                 }
             } 
         }
@@ -126,7 +140,7 @@ export default {
             presentationVideo: {
                 video_id: "0sVur4PJjcw",
                 video_url: "https://www.youtube.com/watch?v=0sVur4PJjcw",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr ehenderit in voluptate velit esse cillum dolore eu fugia."
+                description: "O presente módulo apresentará as principais fases do período clássico grego, entre os anos de 500 a 338 a.C., dominado pelas poleis de Esparta e Atenas. Na vídeo-aula de hoje explicaremos os motivos que ocasionaram as Guerras Médicas e a formação da Liga do Peloponeso por Esparta e a Liga de Delos por Atenas, além de explicitar o florescimento científico e filosófico do mundo Grego no período Clássico."
             },
             player: {},
             ytComponent: {},
