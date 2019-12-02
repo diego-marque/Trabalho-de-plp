@@ -1,6 +1,6 @@
 <template>
     <el-row>
-
+        <HomeCarousel />
     </el-row>
 </template>
 
@@ -10,10 +10,12 @@
 </style>
 
 <script>
+import HomeCarousel from "../components/home/HomeCarousel.vue";
 
 export default {
     name: "Home",
     components: {
+        HomeCarousel,
     }
 }
 </script>
