@@ -107,12 +107,14 @@
 
                    .description {
                         font-size: 1.5em;
+                        margin-bottom: 0px;
                     }
 
                     .div-itens {
-
+                        margin-top: 0px;
+                        text-align: center;
                         .itens {
-                            font-size: 1.3em;
+                            font-size: 1.0em;
                         }
                     }
                 }
