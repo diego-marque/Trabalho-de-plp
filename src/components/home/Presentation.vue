@@ -138,8 +138,8 @@ export default {
     data() {
         return {
             presentationVideo: {
-                video_id: "0sVur4PJjcw",
-                video_url: "https://www.youtube.com/watch?v=0sVur4PJjcw",
+                video_id: "z3uyh7sG-TE",
+                video_url: "https://www.youtube.com/watch?v=z3uyh7sG-TE",
                 description: "O presente módulo apresentará as principais fases do período clássico grego, entre os anos de 500 a 338 a.C., dominado pelas poleis de Esparta e Atenas. Na vídeo-aula de hoje explicaremos os motivos que ocasionaram as Guerras Médicas e a formação da Liga do Peloponeso por Esparta e a Liga de Delos por Atenas, além de explicitar o florescimento científico e filosófico do mundo Grego no período Clássico."
             },
             player: {},

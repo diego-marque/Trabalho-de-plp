@@ -132,7 +132,7 @@ export default {
                     id: 1,
                     photo: require('@/assets/atenas.png'),
                     title: "GRÉCIA ANTIGA",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    description: "Módulo 1: período Clássico",
                     created_at: "2019-07-30 02:17:30",
                     updated_at: "2019-07-30 02:17:35"
                 },
