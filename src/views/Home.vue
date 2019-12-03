@@ -1,9 +1,11 @@
 <template>
-    <el-row class="max-width-container">
-        <Navbar />
+    <el-row>
+        <Navbar style="z-index: 99"></Navbar>
         <HomeCarousel />
-        <Presentation />
-        <Quiz />
+        <el-row class="max-width-container">
+            <Presentation />
+            <Quiz />
+        </el-row>
     </el-row>
 </template>
 

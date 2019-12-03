@@ -1,5 +1,5 @@
 <template>
-    <el-carousel class="home-carousel" trigger="click" arrow="never" height="100vh">
+    <el-carousel id="homeCarousel" class="home-carousel" trigger="click" arrow="never" height="100vh">
             <el-carousel-item v-for="item in items" :key="item.id">
                 <el-row class="darken-filter" :style="{ backgroundImage: `url(${item.photo})` }">
                     <el-col align="center" class="carousel-item-content">
